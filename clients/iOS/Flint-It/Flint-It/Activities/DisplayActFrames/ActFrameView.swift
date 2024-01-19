@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ActFrameView.swift
 //  Flint-It
 //
 //  Created by Julius Huizing on 19/01/2024.
@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ActFrameView: View {
     var body: some View {
-       HomeView()
+        VStack {
+            Text("dfajsfljaslkfj")
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ActFrameView()
 }
