@@ -20,14 +20,7 @@ struct HomeView: View {
                  VStack(alignment: .center) {
 //                     Text("Source")
 //                         .font(.title.bold())
-                     TextArea("Copy Paste Your Norm", text: $text)
-                         .foregroundStyle(.white)
-                         .overlay(alignment: .bottom) {
-                             Button("Analyze") {
-                                 //
-                             }
-                             .padding()
-                         }
+                   InputNormView()
                      
                  }
              } detail: {
