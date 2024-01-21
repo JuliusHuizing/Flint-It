@@ -9,52 +9,65 @@ import SwiftUI
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-struct InputNormView: View {
-    
 
+
+struct InputNormView: View {
+    @Binding var actFrame: Components.Schemas.ActFrame?
     @State var text: String = ""
+    @State var submitted = false
     var onSubmit: (String) -> Void
+    
     var body: some View {
         VStack {
-            TextField("Source", text: $text)
-            Button("Analyze") {
-                onSubmit(text)
+            Spacer()
+            if submitted {
+                
+            } else {
+                ContentUnavailableView("What norm can I parse for you today?", systemImage: "circle.hexagongrid.circle")
             }
-//                print("pressed")
-//                Task {
-//                    await requestActFrame(for: self.text)
-//                }
-//            }
-            .disabled(text.isEmpty)
+            
+            Spacer()
+          
+            InputFieldView(text: $text) { article in
+                self.submitted = true
+                self.onSubmit(article)
+            }
+            
+            
+            //        }
         }
     }
-//    func requestActFrame(for article: String) async {
-//        do {
-//
-//            let response = try await client.post_sol_computeActFrame(body: .json(.init(message: article)))
-//            
-//            switch response {
-//                
-//            case let .ok(okResponse):
-//                switch okResponse.body {
-//                    
-//                case .json(let json):
-//                    
-//                    print("got")
-//                    print(json)
-//                    
-//                }
-//                
-//            case .undocumented(statusCode: let statusCode, let smth):
-//                break
-//                
-//            }
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-//    }
 }
 
-//#Preview {
-//    InputNormView()
-//}
+// keep as separate view so we can use it to align the heights of the contentunavailable views in the display act frame view.
+struct InputFieldView: View {
+    @Binding var text: String
+    var onSubmit: (String) -> Void
+    var body: some View {
+        HStack {
+            TextField("Copy and Paste a source", text: $text)
+            //                .padding()
+            //            TextField("Source", text: $text)
+            Button {
+                onSubmit(text)
+            } label: {
+                Image(systemName: "arrow.up.square.fill")
+            }
+            .disabled(text.isEmpty)
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    NavigationSplitView {
+        //
+    } content: {
+        InputNormView(actFrame: .constant(nil), onSubmit: { _ in})
+
+    } detail: {
+        //
+    }
+
+    
+}

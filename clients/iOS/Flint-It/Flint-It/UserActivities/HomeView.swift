@@ -17,17 +17,18 @@ struct HomeView: View {
                 ForEach(1..<10) { articleNumber in
                     Text("Article \(articleNumber)")
                 }
+                .listStyle(.sidebar)
+
             }
              } content: {
-                 VStack(alignment: .center) {
 
-                     InputNormView(onSubmit: { article in
+                 InputNormView(actFrame: $actFrame, onSubmit: { article in
                          Task {
                              self.actFrame = try await InputHandler.requestActFrame(for: article)
                          }
                      })
                      
-                 }
+                 
              } detail: {
                  ActFrameView(frame: $actFrame)
 //                     .navigationTitle("test")
