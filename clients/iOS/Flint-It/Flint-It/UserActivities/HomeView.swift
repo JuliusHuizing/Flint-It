@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import OpenAPIURLSession
 
 struct HomeView: View {
     @State var text: String = ""
+    @State var actFrame: Components.Schemas.ActFrame? = nil
     var body: some View {
         NavigationSplitView {
             List {
@@ -18,23 +20,16 @@ struct HomeView: View {
             }
              } content: {
                  VStack(alignment: .center) {
-//                     Text("Source")
-//                         .font(.title.bold())
-                   InputNormView()
+
+                     InputNormView(onSubmit: { article in
+                         Task {
+                             self.actFrame = try await InputHandler.requestActFrame(for: article)
+                         }
+                     })
                      
                  }
              } detail: {
-                 SwiftUI.List {
-                     Group {
-                         Section("🔫 Action") {
-                             Text("saff")
-                         }
-                         Section("👱🏻‍♂️ Actor") {
-                             Text("saff")
-                         }
-                     }
-                     .headerProminence(.increased)
-                 }
+                 ActFrameView(frame: $actFrame)
 //                     .navigationTitle("test")
              }
              .navigationTitle("Flint-it")
@@ -44,6 +39,34 @@ struct HomeView: View {
 
     }
 
+
+class InputHandler {
+    enum Errors: Error {
+        case undocumentedResponse
+    }
+    static func requestActFrame(for article: String) async throws -> Components.Schemas.ActFrame {
+            let client: APIProtocol = Client(
+                serverURL: try! Servers.server1(),
+                transport: URLSessionTransport()
+            )
+    
+                let response = try await client.post_sol_computeActFrame(body: .json(.init(message: article)))
+    
+                switch response {
+    
+                    case let .ok(okResponse):
+                        switch okResponse.body {
+                        case .json(let json):
+                            return json
+                        }
+    
+                case .undocumented(statusCode: let statusCode, let smth):
+                    throw Errors.undocumentedResponse
+    
+                }
+            
+        }
+}
 
 #Preview {
     HomeView()

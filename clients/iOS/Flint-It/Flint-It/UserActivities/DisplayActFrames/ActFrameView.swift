@@ -6,15 +6,24 @@
 //
 
 import SwiftUI
+import OpenAPIRuntime
+import OpenAPIURLSession
 
 struct ActFrameView: View {
+    @Binding var frame: Components.Schemas.ActFrame?
     var body: some View {
-        VStack {
-            Text("dfajsfljaslkfj")
+        SwiftUI.List {
+            if let frame {
+                VStack {
+                    Text(frame.Actor)
+                }
+            } else {
+                Text("No Act Frame yet")
+            }
         }
+       
+        
     }
 }
 
-#Preview {
-    ActFrameView()
-}
+
