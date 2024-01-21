@@ -33,10 +33,10 @@ struct HomeView: View {
              } detail: {
                  SwiftUI.List {
                      Group {
-                         Section("🔫Action") {
+                         Section("🔫 Action") {
                              Text("saff")
                          }
-                         Section("👱🏻‍♂️Actor") {
+                         Section("👱🏻‍♂️ Actor") {
                              Text("saff")
                          }
                      }
