@@ -3,8 +3,11 @@ info:
   title: CatService
   version: 1.0.0
 servers:
-  - url: http://localhost:8080/api
-    description: "Localhost cats 🙀"
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/jhuizing/test/1.0.0
+  # - url: http://localhost:8080/api
+  #   description: "Localhost cats 🙀"
 paths:
   /dataprocess:
     post:
@@ -29,7 +32,6 @@ paths:
                 $ref: '#/components/schemas/ActFrame'
 components:
   schemas:
-    # ... [Previous definitions for Condition, NotCondition, AndConditions, OrConditions, NotConditions, and Preconditions] ...
 
     ActFrame:
       type: object
@@ -110,4 +112,3 @@ components:
             - condition: "applicant has valid ID card"
         - not:
             condition: "applicant is currently under detention"
-
