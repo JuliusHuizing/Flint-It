@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AC2B5AC32100D66289 /* InputNormView.swift */; };
+		C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AF2B5AC3A600D66289 /* ActFrameView.swift */; };
+		C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157B12B5AC3E300D66289 /* HomeView.swift */; };
+		C62EC8F82B5E6DA0005ABE1C /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C62EC8F72B5E6DA0005ABE1C /* ActivityIndicatorView */; };
+		C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */; };
+		C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CB62B5AC05F00737B8A /* ContentView.swift */; };
+		C66D5CB92B5AC06000737B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66D5CB82B5AC06000737B8A /* Assets.xcassets */; };
+		C66D5CBD2B5AC06000737B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66D5CBC2B5AC06000737B8A /* Preview Assets.xcassets */; };
+		C66D5CC72B5AC06000737B8A /* Flint_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CC62B5AC06000737B8A /* Flint_ItTests.swift */; };
+		C66D5CD12B5AC06000737B8A /* Flint_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */; };
+		C66D5CD32B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */; };
+		C68C1CBB2B5D26DD00D6ACE2 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */; };
+		C68C1CBE2B5D26EA00D6ACE2 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */; };
+		C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC12B5D285900D6ACE2 /* openapi.yaml */; };
+		C68C1CC42B5D287800D6ACE2 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */; };
+		C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C1CC72B5D445400D6ACE2 /* MockServer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C66D5CC32B5AC06000737B8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C66D5CA92B5AC05F00737B8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66D5CB02B5AC05F00737B8A;
+			remoteInfo = "Flint-It";
+		};
+		C66D5CCD2B5AC06000737B8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C66D5CA92B5AC05F00737B8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66D5CB02B5AC05F00737B8A;
+			remoteInfo = "Flint-It";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C62157AC2B5AC32100D66289 /* InputNormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNormView.swift; sourceTree = "<group>"; };
+		C62157AF2B5AC3A600D66289 /* ActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFrameView.swift; sourceTree = "<group>"; };
+		C62157B12B5AC3E300D66289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C66D5CB12B5AC05F00737B8A /* Flint-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flint-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItApp.swift; sourceTree = "<group>"; };
+		C66D5CB62B5AC05F00737B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C66D5CB82B5AC06000737B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C66D5CBA2B5AC06000737B8A /* Flint_It.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flint_It.entitlements; sourceTree = "<group>"; };
+		C66D5CBC2B5AC06000737B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C66D5CC22B5AC06000737B8A /* Flint-ItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flint-ItTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66D5CC62B5AC06000737B8A /* Flint_ItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItTests.swift; sourceTree = "<group>"; };
+		C66D5CCC2B5AC06000737B8A /* Flint-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flint-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITests.swift; sourceTree = "<group>"; };
+		C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C68C1CC12B5D285900D6ACE2 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		C68C1CC72B5D445400D6ACE2 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C66D5CAE2B5AC05F00737B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68C1CBE2B5D26EA00D6ACE2 /* OpenAPIURLSession in Frameworks */,
+				C62EC8F82B5E6DA0005ABE1C /* ActivityIndicatorView in Frameworks */,
+				C68C1CBB2B5D26DD00D6ACE2 /* OpenAPIRuntime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CBF2B5AC06000737B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CC92B5AC06000737B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C62157AA2B5AC2FF00D66289 /* UserActivities */ = {
+			isa = PBXGroup;
+			children = (
+				C62157AE2B5AC38E00D66289 /* DisplayActFrames */,
+				C62157AB2B5AC31200D66289 /* InputNorms */,
+				C62157B12B5AC3E300D66289 /* HomeView.swift */,
+			);
+			path = UserActivities;
+			sourceTree = "<group>";
+		};
+		C62157AB2B5AC31200D66289 /* InputNorms */ = {
+			isa = PBXGroup;
+			children = (
+				C62157AC2B5AC32100D66289 /* InputNormView.swift */,
+			);
+			path = InputNorms;
+			sourceTree = "<group>";
+		};
+		C62157AE2B5AC38E00D66289 /* DisplayActFrames */ = {
+			isa = PBXGroup;
+			children = (
+				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
+			);
+			path = DisplayActFrames;
+			sourceTree = "<group>";
+		};
+		C66D5CA82B5AC05F00737B8A = {
+			isa = PBXGroup;
+			children = (
+				C66D5CB32B5AC05F00737B8A /* Flint-It */,
+				C66D5CC52B5AC06000737B8A /* Flint-ItTests */,
+				C66D5CCF2B5AC06000737B8A /* Flint-ItUITests */,
+				C66D5CB22B5AC05F00737B8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C66D5CB22B5AC05F00737B8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C66D5CB12B5AC05F00737B8A /* Flint-It.app */,
+				C66D5CC22B5AC06000737B8A /* Flint-ItTests.xctest */,
+				C66D5CCC2B5AC06000737B8A /* Flint-ItUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C66D5CB32B5AC05F00737B8A /* Flint-It */ = {
+			isa = PBXGroup;
+			children = (
+				C62157AA2B5AC2FF00D66289 /* UserActivities */,
+				C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */,
+				C66D5CB62B5AC05F00737B8A /* ContentView.swift */,
+				C66D5CB82B5AC06000737B8A /* Assets.xcassets */,
+				C66D5CBA2B5AC06000737B8A /* Flint_It.entitlements */,
+				C66D5CBB2B5AC06000737B8A /* Preview Content */,
+				C68C1CC12B5D285900D6ACE2 /* openapi.yaml */,
+				C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */,
+				C68C1CC72B5D445400D6ACE2 /* MockServer.swift */,
+			);
+			path = "Flint-It";
+			sourceTree = "<group>";
+		};
+		C66D5CBB2B5AC06000737B8A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C66D5CBC2B5AC06000737B8A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C66D5CC52B5AC06000737B8A /* Flint-ItTests */ = {
+			isa = PBXGroup;
+			children = (
+				C66D5CC62B5AC06000737B8A /* Flint_ItTests.swift */,
+			);
+			path = "Flint-ItTests";
+			sourceTree = "<group>";
+		};
+		C66D5CCF2B5AC06000737B8A /* Flint-ItUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */,
+				C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */,
+			);
+			path = "Flint-ItUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C66D5CB02B5AC05F00737B8A /* Flint-It */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66D5CD62B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-It" */;
+			buildPhases = (
+				C66D5CAD2B5AC05F00737B8A /* Sources */,
+				C66D5CAE2B5AC05F00737B8A /* Frameworks */,
+				C66D5CAF2B5AC05F00737B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C68C1CC02B5D270C00D6ACE2 /* PBXTargetDependency */,
+			);
+			name = "Flint-It";
+			packageProductDependencies = (
+				C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */,
+				C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */,
+				C62EC8F72B5E6DA0005ABE1C /* ActivityIndicatorView */,
+			);
+			productName = "Flint-It";
+			productReference = C66D5CB12B5AC05F00737B8A /* Flint-It.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C66D5CC12B5AC06000737B8A /* Flint-ItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66D5CD92B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-ItTests" */;
+			buildPhases = (
+				C66D5CBE2B5AC06000737B8A /* Sources */,
+				C66D5CBF2B5AC06000737B8A /* Frameworks */,
+				C66D5CC02B5AC06000737B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C66D5CC42B5AC06000737B8A /* PBXTargetDependency */,
+			);
+			name = "Flint-ItTests";
+			productName = "Flint-ItTests";
+			productReference = C66D5CC22B5AC06000737B8A /* Flint-ItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C66D5CCB2B5AC06000737B8A /* Flint-ItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66D5CDC2B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-ItUITests" */;
+			buildPhases = (
+				C66D5CC82B5AC06000737B8A /* Sources */,
+				C66D5CC92B5AC06000737B8A /* Frameworks */,
+				C66D5CCA2B5AC06000737B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C66D5CCE2B5AC06000737B8A /* PBXTargetDependency */,
+			);
+			name = "Flint-ItUITests";
+			productName = "Flint-ItUITests";
+			productReference = C66D5CCC2B5AC06000737B8A /* Flint-ItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C66D5CA92B5AC05F00737B8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					C66D5CB02B5AC05F00737B8A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					C66D5CC12B5AC06000737B8A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = C66D5CB02B5AC05F00737B8A;
+					};
+					C66D5CCB2B5AC06000737B8A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = C66D5CB02B5AC05F00737B8A;
+					};
+				};
+			};
+			buildConfigurationList = C66D5CAC2B5AC05F00737B8A /* Build configuration list for PBXProject "Flint-It" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C66D5CA82B5AC05F00737B8A;
+			packageReferences = (
+				C68C1CB82B5D26CA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				C68C1CB92B5D26DD00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				C68C1CBC2B5D26EA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				C62EC8F62B5E6DA0005ABE1C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+			);
+			productRefGroup = C66D5CB22B5AC05F00737B8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C66D5CB02B5AC05F00737B8A /* Flint-It */,
+				C66D5CC12B5AC06000737B8A /* Flint-ItTests */,
+				C66D5CCB2B5AC06000737B8A /* Flint-ItUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C66D5CAF2B5AC05F00737B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66D5CBD2B5AC06000737B8A /* Preview Assets.xcassets in Resources */,
+				C66D5CB92B5AC06000737B8A /* Assets.xcassets in Resources */,
+				C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */,
+				C68C1CC42B5D287800D6ACE2 /* openapi-generator-config.yaml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CC02B5AC06000737B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CCA2B5AC06000737B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C66D5CAD2B5AC05F00737B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
+				C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */,
+				C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */,
+				C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */,
+				C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */,
+				C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CBE2B5AC06000737B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66D5CC72B5AC06000737B8A /* Flint_ItTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66D5CC82B5AC06000737B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66D5CD32B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift in Sources */,
+				C66D5CD12B5AC06000737B8A /* Flint_ItUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C66D5CC42B5AC06000737B8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66D5CB02B5AC05F00737B8A /* Flint-It */;
+			targetProxy = C66D5CC32B5AC06000737B8A /* PBXContainerItemProxy */;
+		};
+		C66D5CCE2B5AC06000737B8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66D5CB02B5AC05F00737B8A /* Flint-It */;
+			targetProxy = C66D5CCD2B5AC06000737B8A /* PBXContainerItemProxy */;
+		};
+		C68C1CC02B5D270C00D6ACE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C68C1CBF2B5D270C00D6ACE2 /* OpenAPIGenerator */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C66D5CD42B5AC06000737B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C66D5CD52B5AC06000737B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C66D5CD72B5AC06000737B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Flint-It/Flint_It.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flint-It/Preview Content\"";
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-It";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C66D5CD82B5AC06000737B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Flint-It/Flint_It.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flint-It/Preview Content\"";
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-It";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C66D5CDA2B5AC06000737B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-ItTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flint-It.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Flint-It";
+			};
+			name = Debug;
+		};
+		C66D5CDB2B5AC06000737B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-ItTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flint-It.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Flint-It";
+			};
+			name = Release;
+		};
+		C66D5CDD2B5AC06000737B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-ItUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flint-It";
+			};
+			name = Debug;
+		};
+		C66D5CDE2B5AC06000737B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 676248Z4DL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-ItUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flint-It";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C66D5CAC2B5AC05F00737B8A /* Build configuration list for PBXProject "Flint-It" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66D5CD42B5AC06000737B8A /* Debug */,
+				C66D5CD52B5AC06000737B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66D5CD62B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-It" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66D5CD72B5AC06000737B8A /* Debug */,
+				C66D5CD82B5AC06000737B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66D5CD92B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-ItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66D5CDA2B5AC06000737B8A /* Debug */,
+				C66D5CDB2B5AC06000737B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66D5CDC2B5AC06000737B8A /* Build configuration list for PBXNativeTarget "Flint-ItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66D5CDD2B5AC06000737B8A /* Debug */,
+				C66D5CDE2B5AC06000737B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C62EC8F62B5E6DA0005ABE1C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		C68C1CB82B5D26CA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		C68C1CB92B5D26DD00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+		C68C1CBC2B5D26EA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C62EC8F72B5E6DA0005ABE1C /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C62EC8F62B5E6DA0005ABE1C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C68C1CB92B5D26DD00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C68C1CBC2B5D26EA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		C68C1CBF2B5D270C00D6ACE2 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C68C1CB82B5D26CA00D6ACE2 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C66D5CA92B5AC05F00737B8A /* Project object */;
+}
