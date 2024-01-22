@@ -17,7 +17,7 @@ struct ActFrameView: View {
         if computingActFrame {
             VStack {
                 Spacer()
-                ActivityIndicatorView(isVisible: $computingActFrame, type: .arcs(count: 3, lineWidth: 2))
+                ActivityIndicatorView(isVisible: $computingActFrame, type: .opacityDots(count: 3, inset: 4))
                     .frame(width: 100, height: 100)
                     .foregroundColor(.white)
                 Text("Constructing Act Frame")
