@@ -12,7 +12,6 @@ import OpenAPIURLSession
 
 
 struct InputNormView: View {
-    @Binding var actFrame: Components.Schemas.ActFrame?
     @Binding var processingInput: Bool
     @State var text: String = ""
     @State var messageHistory: [Message] = .init()
@@ -66,7 +65,7 @@ struct InputFieldView: View {
     NavigationSplitView {
         //
     } content: {
-        InputNormView(actFrame: .constant(nil), processingInput: .constant(false), onSubmit: { _ in})
+        InputNormView(processingInput: .constant(false), onSubmit: { _ in})
 
     } detail: {
         //

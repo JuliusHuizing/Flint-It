@@ -11,21 +11,9 @@ import OpenAPIURLSession
 import ActivityIndicatorView
 
 struct ActFrameView: View {
-    @Binding var frame: Components.Schemas.ActFrame?
-    @Binding var computingActFrame: Bool 
+    var frame: Components.Schemas.ActFrame
     var body: some View {
-        if computingActFrame {
-            VStack {
-                Spacer()
-                ActivityIndicatorView(isVisible: $computingActFrame, type: .opacityDots(count: 3, inset: 4))
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.white)
-                Text("Constructing Act Frame")
-                    .font(.headline.bold())
-                Spacer()
-            }
-        } else {
-            if let frame {
+
                 SwiftUI.List {
                     Section("Actor") {
                         Text(frame.Actor)
@@ -62,21 +50,9 @@ struct ActFrameView: View {
                             .frame(width: 100, height: 100)
                     }
                 }
-            } else {
-                VStack {
-                    Spacer()
-                    ContentUnavailableView("No Act Frame yet.", systemImage: "scribble.variable", description: Text("Copy paste a source to the left and press the analyze button to get started."))
-                    Spacer()
-                    InputFieldView(text: .constant(""), onSubmit: {_ in})
-                        .opacity(0)
                     
                 }
             }
-        }
-    }
-       
-        
-    }
 
 
 
