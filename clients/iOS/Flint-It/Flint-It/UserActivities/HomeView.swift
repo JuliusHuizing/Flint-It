@@ -11,6 +11,7 @@ import OpenAPIURLSession
 struct HomeView: View {
     @State var text: String = ""
     @State var actFrame: Components.Schemas.ActFrame? = nil
+    @State var isLoading = false
     var body: some View {
         NavigationSplitView {
             List {
@@ -22,15 +23,18 @@ struct HomeView: View {
             }
              } content: {
 
-                 InputNormView(actFrame: $actFrame, onSubmit: { article in
+                 InputNormView(actFrame: $actFrame, processingInput: $isLoading, onSubmit: { article in
                          Task {
+                             self.isLoading = true
+                             try? await Task.sleep(for: .seconds(3))
+                             self.isLoading = false
                              self.actFrame = try await InputHandler.requestActFrame(for: article)
                          }
                      })
                      
                  
              } detail: {
-                 ActFrameView(frame: $actFrame)
+                 ActFrameView(frame: $actFrame, computingActFrame: $isLoading)
 //                     .navigationTitle("test")
              }
              .navigationTitle("Flint-it")
