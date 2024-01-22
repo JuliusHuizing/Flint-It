@@ -15,22 +15,24 @@ struct InputNormView: View {
     @Binding var actFrame: Components.Schemas.ActFrame?
     @Binding var processingInput: Bool
     @State var text: String = ""
-    @State var submitted = false
+    @State var messageHistory: [Message] = .init()
     var onSubmit: (String) -> Void
-    
     var body: some View {
         VStack {
-            Spacer()
-            if submitted {
-                
-            } else {
-                ContentUnavailableView("What norm can I parse for you today?", systemImage: "circle.hexagongrid.circle")
-            }
-            
-            Spacer()
-          
+            ChatView(chatHistory: $messageHistory)
+        
             InputFieldView(text: $text) { article in
-                self.submitted = true
+                withAnimation {
+                    
+                    self.messageHistory.append( .init(sender: .user, message: article))
+                    let seconds = 1.0
+                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                        
+                        self.messageHistory.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
+                    }
+                      
+                    }
+                  
                 self.onSubmit(article)
             }
             

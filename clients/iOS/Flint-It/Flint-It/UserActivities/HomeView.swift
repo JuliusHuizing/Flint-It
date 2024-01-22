@@ -22,7 +22,7 @@ struct HomeView: View {
 
             }
              } content: {
-
+                 
                  InputNormView(actFrame: $actFrame, processingInput: $isLoading, onSubmit: { article in
                          Task {
                              self.isLoading = true
