@@ -45,15 +45,28 @@ struct InputFieldView: View {
     @Binding var text: String
     var onSubmit: (String) -> Void
     var body: some View {
-        HStack {
-            TextField("Copy and Paste a source", text: $text)
+        VStack {
+            
+                
+            TextEditor(text: $text)
+                .font(.title)
+                .foregroundColor(.orange)
+                .textEditorStyle(.plain)
+             
+            
+//            TextField("Copy and Paste a source", text: $text)
             //                .padding()
             //            TextField("Source", text: $text)
+            
+            
             Button {
                 onSubmit(text)
             } label: {
-                Image(systemName: "arrow.up.square.fill")
+                Label("Analyze", systemImage: "arrow.up.square.fill")
+                    .padding()
+                    .font(.largeTitle)
             }
+            .buttonStyle(.borderedProminent)
             .disabled(text.isEmpty)
         }
         .padding()
