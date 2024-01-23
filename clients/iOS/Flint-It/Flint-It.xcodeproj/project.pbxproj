@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2412A4DF2B5EBA2E008897EA /* PreconditionsView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */; };
 		C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AC2B5AC32100D66289 /* InputNormView.swift */; };
 		C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AF2B5AC3A600D66289 /* ActFrameView.swift */; };
 		C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157B12B5AC3E300D66289 /* HomeView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreconditionsView.swift.swift; sourceTree = "<group>"; };
 		C62157AC2B5AC32100D66289 /* InputNormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNormView.swift; sourceTree = "<group>"; };
 		C62157AF2B5AC3A600D66289 /* ActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFrameView.swift; sourceTree = "<group>"; };
 		C62157B12B5AC3E300D66289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
+				2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */,
 			);
 			path = DisplayActFrames;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
 				C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */,
+				2412A4DF2B5EBA2E008897EA /* PreconditionsView.swift.swift in Sources */,
 				C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */,
 				C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */,
 				C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */,
@@ -487,10 +491,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Flint-It/Flint_It.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Flint-It/Preview Content\"";
-				DEVELOPMENT_TEAM = 676248Z4DL;
+				DEVELOPMENT_TEAM = US7AD993A9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -512,10 +517,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -525,10 +530,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Flint-It/Flint_It.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Flint-It/Preview Content\"";
-				DEVELOPMENT_TEAM = 676248Z4DL;
+				DEVELOPMENT_TEAM = US7AD993A9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -550,10 +556,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shared.Flint-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
