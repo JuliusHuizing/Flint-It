@@ -20,6 +20,7 @@ struct InputNormView: View {
         VStack {
             ChatView(chatHistory: $messageHistory)
         
+            Divider()
             InputFieldView(text: $text) { article in
                 withAnimation {
                     
@@ -41,25 +42,6 @@ struct InputNormView: View {
     }
 }
 
-// keep as separate view so we can use it to align the heights of the contentunavailable views in the display act frame view.
-struct InputFieldView: View {
-    @Binding var text: String
-    var onSubmit: (String) -> Void
-    var body: some View {
-        HStack {
-            TextField("Copy and Paste a source", text: $text)
-            //                .padding()
-            //            TextField("Source", text: $text)
-            Button {
-                onSubmit(text)
-            } label: {
-                Image(systemName: "arrow.up.square.fill")
-            }
-            .disabled(text.isEmpty)
-        }
-        .padding()
-    }
-}
 
 #Preview {
     NavigationSplitView {

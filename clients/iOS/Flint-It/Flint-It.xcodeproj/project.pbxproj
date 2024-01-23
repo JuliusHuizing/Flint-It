@@ -22,6 +22,7 @@
 		C66D5CC72B5AC06000737B8A /* Flint_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CC62B5AC06000737B8A /* Flint_ItTests.swift */; };
 		C66D5CD12B5AC06000737B8A /* Flint_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */; };
 		C66D5CD32B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */; };
+		C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6785BF92B60083300494C66 /* TextInputView.swift */; };
 		C68C1CBB2B5D26DD00D6ACE2 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */; };
 		C68C1CBE2B5D26EA00D6ACE2 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */; };
 		C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC12B5D285900D6ACE2 /* openapi.yaml */; };
@@ -65,6 +66,7 @@
 		C66D5CCC2B5AC06000737B8A /* Flint-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flint-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITests.swift; sourceTree = "<group>"; };
 		C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6785BF92B60083300494C66 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		C68C1CC12B5D285900D6ACE2 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		C68C1CC72B5D445400D6ACE2 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				C62157AC2B5AC32100D66289 /* InputNormView.swift */,
 				C608FA472B5EB0EE001569E1 /* ChatView.swift */,
+				C6785BF92B60083300494C66 /* TextInputView.swift */,
 			);
 			path = InputNorms;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */,
 				C608FA502B5EBBBB001569E1 /* ComputingActFrameView.swift in Sources */,
 				C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */,
+				C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
