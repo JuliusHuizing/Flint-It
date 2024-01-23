@@ -12,25 +12,27 @@ import OpenAPIURLSession
 
 
 struct InputNormView: View {
-    @Binding var actFrame: Components.Schemas.ActFrame?
     @Binding var processingInput: Bool
     @State var text: String = ""
-    @State var submitted = false
+    @State var messageHistory: [Message] = .init()
     var onSubmit: (String) -> Void
-    
     var body: some View {
         VStack {
-            Spacer()
-            if submitted {
-                
-            } else {
-                ContentUnavailableView("What norm can I parse for you today?", systemImage: "circle.hexagongrid.circle")
-            }
-            
-            Spacer()
-          
+            ChatView(chatHistory: $messageHistory)
+        
+            Divider()
             InputFieldView(text: $text) { article in
-                self.submitted = true
+                withAnimation {
+                    
+                    self.messageHistory.append( .init(sender: .user, message: article))
+                    let seconds = 1.0
+                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                        
+                        self.messageHistory.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
+                    }
+                      
+                    }
+                  
                 self.onSubmit(article)
             }
             
@@ -40,31 +42,12 @@ struct InputNormView: View {
     }
 }
 
-// keep as separate view so we can use it to align the heights of the contentunavailable views in the display act frame view.
-struct InputFieldView: View {
-    @Binding var text: String
-    var onSubmit: (String) -> Void
-    var body: some View {
-        HStack {
-            TextField("Copy and Paste a source", text: $text)
-            //                .padding()
-            //            TextField("Source", text: $text)
-            Button {
-                onSubmit(text)
-            } label: {
-                Image(systemName: "arrow.up.square.fill")
-            }
-            .disabled(text.isEmpty)
-        }
-        .padding()
-    }
-}
 
 #Preview {
     NavigationSplitView {
         //
     } content: {
-        InputNormView(actFrame: .constant(nil), processingInput: .constant(false), onSubmit: { _ in})
+        InputNormView(processingInput: .constant(false), onSubmit: { _ in})
 
     } detail: {
         //

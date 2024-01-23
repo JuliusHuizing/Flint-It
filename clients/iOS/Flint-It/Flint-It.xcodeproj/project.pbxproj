@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2412A4DF2B5EBA2E008897EA /* PreconditionsView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */; };
 		C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AC2B5AC32100D66289 /* InputNormView.swift */; };
 		C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AF2B5AC3A600D66289 /* ActFrameView.swift */; };
 		C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157B12B5AC3E300D66289 /* HomeView.swift */; };
@@ -19,6 +18,7 @@
 		C66D5CC72B5AC06000737B8A /* Flint_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CC62B5AC06000737B8A /* Flint_ItTests.swift */; };
 		C66D5CD12B5AC06000737B8A /* Flint_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */; };
 		C66D5CD32B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */; };
+		C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6785BF92B60083300494C66 /* TextInputView.swift */; };
 		C68C1CBB2B5D26DD00D6ACE2 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */; };
 		C68C1CBE2B5D26EA00D6ACE2 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */; };
 		C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC12B5D285900D6ACE2 /* openapi.yaml */; };
@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreconditionsView.swift.swift; sourceTree = "<group>"; };
 		C62157AC2B5AC32100D66289 /* InputNormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNormView.swift; sourceTree = "<group>"; };
 		C62157AF2B5AC3A600D66289 /* ActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFrameView.swift; sourceTree = "<group>"; };
 		C62157B12B5AC3E300D66289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		C66D5CCC2B5AC06000737B8A /* Flint-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flint-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITests.swift; sourceTree = "<group>"; };
 		C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6785BF92B60083300494C66 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		C68C1CC12B5D285900D6ACE2 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		C68C1CC72B5D445400D6ACE2 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				C62157AC2B5AC32100D66289 /* InputNormView.swift */,
+				C608FA472B5EB0EE001569E1 /* ChatView.swift */,
+				C6785BF92B60083300494C66 /* TextInputView.swift */,
 			);
 			path = InputNorms;
 			sourceTree = "<group>";
@@ -114,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
-				2412A4DE2B5EBA2E008897EA /* PreconditionsView.swift.swift */,
 			);
 			path = DisplayActFrames;
 			sourceTree = "<group>";
@@ -324,13 +325,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C608FA4D2B5EBB8E001569E1 /* FramesStartupView.swift in Sources */,
 				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
 				C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */,
 				2412A4DF2B5EBA2E008897EA /* PreconditionsView.swift.swift in Sources */,
 				C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */,
 				C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */,
+				C608FA4A2B5EB786001569E1 /* FramesView.swift in Sources */,
+				C608FA482B5EB0EE001569E1 /* ChatView.swift in Sources */,
 				C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */,
+				C608FA502B5EBBBB001569E1 /* ComputingActFrameView.swift in Sources */,
 				C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */,
+				C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
