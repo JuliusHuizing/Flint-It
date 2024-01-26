@@ -51,7 +51,7 @@ struct HomeView: View {
                 }
             }
              } content: {
-                 InputNormView(processingInput: $isLoading, onSubmit: { article in
+                 ChatWindow(chat: showingChat, onSubmit: { article in
                          Task {
                              self.isLoading = true
                              try? await Task.sleep(for: .seconds(6))

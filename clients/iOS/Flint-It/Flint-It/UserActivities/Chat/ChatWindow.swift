@@ -10,22 +10,23 @@ import OpenAPIRuntime
 import OpenAPIURLSession
 
 
-struct InputNormView: View {
-    @Binding var processingInput: Bool
+struct ChatWindow: View {
+    @ObservedObject var chat: Chat
+//    @Binding var processingInput: Bool
     @State var text: String = ""
-    @State var messageHistory: [Message] = .init()
+//    @State var messageHistory: [Message] = .init()
     var onSubmit: (String) -> Void
     var body: some View {
         VStack {
-            ChatView(chatHistory: $messageHistory)
+            ChatView(chat: chat)
             
             Divider()
             InputFieldView(text: $text) { article in
                 withAnimation {
-                    self.messageHistory.append( .init(sender: .user, message: article))
+                    chat.messages.append( .init(sender: .user, message: article))
                     let seconds = 1.0
                     DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        self.messageHistory.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
+                        chat.messages.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
                     }
                 }
                 self.onSubmit(article)
@@ -35,15 +36,15 @@ struct InputNormView: View {
 }
 
 
-#Preview {
-    NavigationSplitView {
-        //
-    } content: {
-        InputNormView(processingInput: .constant(false), onSubmit: { _ in})
-
-    } detail: {
-        //
-    }
-
-    
-}
+//#Preview {
+//    NavigationSplitView {
+//        //
+//    } content: {
+//        ChatWindow(processingInput: .constant(false), onSubmit: { _ in})
+//
+//    } detail: {
+//        //
+//    }
+//
+//    
+//}

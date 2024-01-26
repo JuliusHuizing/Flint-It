@@ -9,9 +9,9 @@ import SwiftUI
 
 
 struct ChatView: View {
-    @Binding var chatHistory: [Message]
+    @ObservedObject var chat: Chat
     var body: some View {
-        if chatHistory.isEmpty {
+        if chat.messages.isEmpty {
             VStack {
                 Spacer()
                 ContentUnavailableView("What norm can I parse for you today?", systemImage: "circle.hexagongrid.circle")
@@ -19,7 +19,7 @@ struct ChatView: View {
             }
             
         } else {
-            SwiftUI.List(chatHistory) { message in
+            SwiftUI.List(chat.messages) { message in
                 MessageView(message: message)
             }
         }
@@ -28,13 +28,13 @@ struct ChatView: View {
 
 
 
-#Preview {
-    NavigationSplitView {
-        Text("test")
-    } content: {
-        ChatView(chatHistory: .constant(.init()))
-    } detail: {
-        Text("test")
-    }
-
-}
+//#Preview {
+//    NavigationSplitView {
+//        Text("test")
+//    } content: {
+//        ChatView(chatHistory: .constant(.init()))
+//    } detail: {
+//        Text("test")
+//    }
+//
+//}
