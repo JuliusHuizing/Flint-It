@@ -23,14 +23,15 @@
 		C66D5CD12B5AC06000737B8A /* Flint_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */; };
 		C66D5CD32B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */; };
 		C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6785BF92B60083300494C66 /* TextInputView.swift */; };
+		C68808092B64021D00D1DD10 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68808082B64021D00D1DD10 /* Chat.swift */; };
 		C68C1CBB2B5D26DD00D6ACE2 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBA2B5D26DD00D6ACE2 /* OpenAPIRuntime */; };
 		C68C1CBE2B5D26EA00D6ACE2 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = C68C1CBD2B5D26EA00D6ACE2 /* OpenAPIURLSession */; };
 		C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC12B5D285900D6ACE2 /* openapi.yaml */; };
 		C68C1CC42B5D287800D6ACE2 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */; };
-		C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C1CC72B5D445400D6ACE2 /* MockServer.swift */; };
 		C6AC3B162B62E111002A0C3F /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AC3B152B62E111002A0C3F /* InputHandler.swift */; };
 		C6AE11812B63E8D6005033C9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE11802B63E8D6005033C9 /* Message.swift */; };
 		C6AE11832B63E900005033C9 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE11822B63E900005033C9 /* MessageView.swift */; };
+		C6AE11872B63EA93005033C9 /* StreamHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE11862B63EA93005033C9 /* StreamHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +71,13 @@
 		C66D5CD02B5AC06000737B8A /* Flint_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITests.swift; sourceTree = "<group>"; };
 		C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C6785BF92B60083300494C66 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		C68808082B64021D00D1DD10 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C68C1CC12B5D285900D6ACE2 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
-		C68C1CC72B5D445400D6ACE2 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		C6AC3B152B62E111002A0C3F /* InputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHandler.swift; sourceTree = "<group>"; };
 		C6AE11802B63E8D6005033C9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C6AE11822B63E900005033C9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		C6AE11862B63EA93005033C9 /* StreamHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,8 @@
 		C66D5CB32B5AC05F00737B8A /* Flint-It */ = {
 			isa = PBXGroup;
 			children = (
+				C6AC3B152B62E111002A0C3F /* InputHandler.swift */,
+				C6AE11862B63EA93005033C9 /* StreamHandler.swift */,
 				C6AE117F2B63E8B7005033C9 /* Models */,
 				C62157AA2B5AC2FF00D66289 /* UserActivities */,
 				C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */,
@@ -170,8 +174,6 @@
 				C66D5CBB2B5AC06000737B8A /* Preview Content */,
 				C68C1CC12B5D285900D6ACE2 /* openapi.yaml */,
 				C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */,
-				C68C1CC72B5D445400D6ACE2 /* MockServer.swift */,
-				C6AC3B152B62E111002A0C3F /* InputHandler.swift */,
 			);
 			path = "Flint-It";
 			sourceTree = "<group>";
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				C6AE11802B63E8D6005033C9 /* Message.swift */,
+				C68808082B64021D00D1DD10 /* Chat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,8 +358,8 @@
 			files = (
 				C608FA4D2B5EBB8E001569E1 /* FramesStartupView.swift in Sources */,
 				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
+				C6AE11872B63EA93005033C9 /* StreamHandler.swift in Sources */,
 				C62157AD2B5AC32100D66289 /* InputNormView.swift in Sources */,
-				C68C1CC82B5D445400D6ACE2 /* MockServer.swift in Sources */,
 				C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */,
 				C608FA4A2B5EB786001569E1 /* FramesView.swift in Sources */,
 				C608FA482B5EB0EE001569E1 /* ChatView.swift in Sources */,
@@ -366,6 +369,7 @@
 				C608FA502B5EBBBB001569E1 /* ComputingActFrameView.swift in Sources */,
 				C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */,
 				C6AE11832B63E900005033C9 /* MessageView.swift in Sources */,
+				C68808092B64021D00D1DD10 /* Chat.swift in Sources */,
 				C6785BFA2B60083300494C66 /* TextInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

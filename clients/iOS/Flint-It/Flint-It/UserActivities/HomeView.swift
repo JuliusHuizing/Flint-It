@@ -9,20 +9,41 @@ import SwiftUI
 import OpenAPIURLSession
 
 struct HomeView: View {
+    @State var chats: [Chat] = [.init()]
     @State var text: String = ""
     @State var actFrames: [Components.Schemas.ActFrame] = .init()
     @State var isLoading = false
+    @State var showingChat: Chat
+    
+    init() {
+        let chats = [Chat.init()]
+        self._chats = State(initialValue: chats)
+        self._showingChat = State(initialValue:chats.first!)
+    }
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(1..<10) { articleNumber in
-                    Text("Article \(articleNumber)")
+                Button("New Chat") {
+                    withAnimation {
+                        self.chats.append(.init())
+                    }
                 }
-                .listStyle(.sidebar)
-
+                ForEach(chats.sorted(by: { chat1, chat2 in
+                    chat1.date > chat2.date
+                })) { chat in
+                    Button(chat.id) {
+                        withAnimation {
+                            self.showingChat = chat
+                        }
+                    
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(self.showingChat.id == chat.id ? .primary : .secondary)
+                    Divider()
+       
+                }
             }
              } content: {
-                 
                  InputNormView(processingInput: $isLoading, onSubmit: { article in
                          Task {
                              self.isLoading = true
@@ -34,8 +55,6 @@ struct HomeView: View {
                              }
                          }
                      })
-                     
-                 
              } detail: {
                  if isLoading {
                      ComputingActFrameView()
@@ -48,17 +67,10 @@ struct HomeView: View {
                      FramesView(frames: $actFrames)
                  }
                  
-//                 ActFrameView(frame: $actFrame, computingActFrame: $isLoading)
-//                     .navigationTitle("test")
              }
              .navigationTitle("Flint-it")
-
          }
-    
-
     }
-
-
 
 #Preview {
     HomeView()

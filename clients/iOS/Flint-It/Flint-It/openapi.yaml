@@ -30,6 +30,30 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ActFrame'
+
+  /stream_reasoning:
+    post:
+      
+      summary: Stream Reasoning
+      description: Accepts a list of messages and streams responses from the OpenAI API.
+      requestBody:
+        required: true
+        content:
+           application/json:
+            schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+      responses:
+        '200':
+          description: A stream of responses from the OpenAI API.
+          content:
+            text/event-stream:
+              schema:
+                type: string
+                example: "Response text from OpenAI API..."
 components:
   schemas:
     ActFrame:
