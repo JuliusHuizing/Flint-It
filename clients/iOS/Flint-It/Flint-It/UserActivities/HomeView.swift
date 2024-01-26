@@ -23,11 +23,18 @@ struct HomeView: View {
     var body: some View {
         NavigationSplitView {
             List {
-                Button("New Chat") {
+                Button {
                     withAnimation {
-                        self.chats.append(.init())
+                        let newChat: Chat = .init()
+                        self.chats.append(newChat)
+                        self.showingChat = newChat
                     }
+                } label: {
+                    Label("new chat", systemImage: "plus.circle")
                 }
+                .buttonStyle(.plain)
+                .frame(maxWidth: .infinity)
+                Divider()
                 ForEach(chats.sorted(by: { chat1, chat2 in
                     chat1.date > chat2.date
                 })) { chat in
