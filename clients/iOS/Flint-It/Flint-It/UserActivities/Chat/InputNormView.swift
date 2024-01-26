@@ -10,7 +10,6 @@ import OpenAPIRuntime
 import OpenAPIURLSession
 
 
-
 struct InputNormView: View {
     @Binding var processingInput: Bool
     @State var text: String = ""
@@ -19,25 +18,18 @@ struct InputNormView: View {
     var body: some View {
         VStack {
             ChatView(chatHistory: $messageHistory)
-        
+            
             Divider()
             InputFieldView(text: $text) { article in
                 withAnimation {
-                    
                     self.messageHistory.append( .init(sender: .user, message: article))
                     let seconds = 1.0
                     DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        
                         self.messageHistory.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
                     }
-                      
-                    }
-                  
+                }
                 self.onSubmit(article)
             }
-            
-            
-            //        }
         }
     }
 }

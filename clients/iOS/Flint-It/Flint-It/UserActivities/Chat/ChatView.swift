@@ -6,27 +6,6 @@
 //
 
 import SwiftUI
-struct Message: Identifiable {
-    let id = UUID().uuidString
-    enum Sender: String {
-        case user = "You"
-        case bot = "FlintGPT"
-    }
-    var sender: Sender
-    var message: String
-    var timeStamp: Date = Date.now
-    
-    
-}
-
-extension Message {
-    func mock() -> [Message] {
-        [
-           .init(sender: .user, message: "how are you"),
-           .init(sender: .bot, message: "Good. you?")
-       ]
-    }
-}
 
 
 struct ChatView: View {
@@ -47,18 +26,7 @@ struct ChatView: View {
     }
 }
 
-struct MessageView: View {
-    let message: Message
-    var body: some View {
-        
-        VStack(alignment: .leading) {
-            Text(message.sender.rawValue)
-                .font(.headline.bold())
-            Text(message.message)
-                .foregroundStyle(.secondary)
-        }
-               }
-}
+
 
 #Preview {
     NavigationSplitView {

@@ -39,7 +39,8 @@ struct InputFieldView: View {
                     .padding()
                     .buttonStyle(.plain)
                     .font(.largeTitle)
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(Color.white, Color.accentColor)
+                    .shadow(radius: 10)
                     
                 }
             //                .padding()
