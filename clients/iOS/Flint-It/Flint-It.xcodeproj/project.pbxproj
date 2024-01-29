@@ -29,6 +29,7 @@
 		C68C1CC22B5D285900D6ACE2 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC12B5D285900D6ACE2 /* openapi.yaml */; };
 		C68C1CC42B5D287800D6ACE2 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */; };
 		C698444F2B67BB7600681F1C /* NormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C698444E2B67BB7600681F1C /* NormView.swift */; };
+		C69844542B67C8BB00681F1C /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69844532B67C8BB00681F1C /* FileDownloader.swift */; };
 		C6AC3B162B62E111002A0C3F /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AC3B152B62E111002A0C3F /* InputHandler.swift */; };
 		C6AE11812B63E8D6005033C9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE11802B63E8D6005033C9 /* Message.swift */; };
 		C6AE11832B63E900005033C9 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE11822B63E900005033C9 /* MessageView.swift */; };
@@ -76,6 +77,7 @@
 		C68C1CC12B5D285900D6ACE2 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		C68C1CC32B5D287800D6ACE2 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		C698444E2B67BB7600681F1C /* NormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormView.swift; sourceTree = "<group>"; };
+		C69844532B67C8BB00681F1C /* FileDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		C6AC3B152B62E111002A0C3F /* InputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHandler.swift; sourceTree = "<group>"; };
 		C6AE11802B63E8D6005033C9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C6AE11822B63E900005033C9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		C62157AA2B5AC2FF00D66289 /* UserActivities */ = {
 			isa = PBXGroup;
 			children = (
+				C69844512B67C8A800681F1C /* Download */,
 				C62157AE2B5AC38E00D66289 /* DisplayActFrames */,
 				C62157AB2B5AC31200D66289 /* Chat */,
 				C62157B12B5AC3E300D66289 /* HomeView.swift */,
@@ -135,10 +138,10 @@
 		C62157AE2B5AC38E00D66289 /* DisplayActFrames */ = {
 			isa = PBXGroup;
 			children = (
+				C608FA492B5EB786001569E1 /* FramesView.swift */,
 				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
 				C608FA4C2B5EBB8E001569E1 /* FramesStartupView.swift */,
 				C608FA4F2B5EBBBB001569E1 /* ComputingActFrameView.swift */,
-				C608FA492B5EB786001569E1 /* FramesView.swift */,
 			);
 			path = DisplayActFrames;
 			sourceTree = "<group>";
@@ -204,6 +207,14 @@
 				C66D5CD22B5AC06000737B8A /* Flint_ItUITestsLaunchTests.swift */,
 			);
 			path = "Flint-ItUITests";
+			sourceTree = "<group>";
+		};
+		C69844512B67C8A800681F1C /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				C69844532B67C8BB00681F1C /* FileDownloader.swift */,
+			);
+			path = Download;
 			sourceTree = "<group>";
 		};
 		C6AE117F2B63E8B7005033C9 /* Models */ = {
@@ -369,6 +380,7 @@
 				C608FA482B5EB0EE001569E1 /* ChatView.swift in Sources */,
 				C6AC3B162B62E111002A0C3F /* InputHandler.swift in Sources */,
 				C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */,
+				C69844542B67C8BB00681F1C /* FileDownloader.swift in Sources */,
 				C6AE11812B63E8D6005033C9 /* Message.swift in Sources */,
 				C608FA502B5EBBBB001569E1 /* ComputingActFrameView.swift in Sources */,
 				C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */,

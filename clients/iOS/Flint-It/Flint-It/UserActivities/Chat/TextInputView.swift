@@ -25,7 +25,6 @@ struct InputFieldView: View {
         
         .font(.headline)
                 .textEditorStyle(.plain)
-                .foregroundStyle(.orange)
                 .scrollIndicators(.never)
                 .overlay(alignment: .bottomTrailing) {
                     Button {

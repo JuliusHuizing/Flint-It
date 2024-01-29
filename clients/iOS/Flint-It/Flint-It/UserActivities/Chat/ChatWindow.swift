@@ -37,6 +37,8 @@ struct ChatWindow: View {
                 self.onSubmit(article)
             }
             .frame(height: chat.article == nil ? 500 : 250 )
+            .foregroundStyle(chat.article == nil ? .orange : .primary)
+
             
         }
     }
