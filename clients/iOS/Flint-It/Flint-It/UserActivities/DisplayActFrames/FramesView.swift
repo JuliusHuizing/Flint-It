@@ -10,29 +10,34 @@ import SwiftUI
 struct FramesView: View {
     @Binding var frames: [Components.Schemas.ActFrame]
     var body: some View {
-        TabView {
-            ForEach(frames, id: \.self) { actFrame in
-                ActFrameView(frame: actFrame)
-                    .tabItem {
-                        HStack {
-                            Text(actFrame.Action)
-                        }
-                           }
-                    .overlay(alignment: .bottomTrailing) {
-                        Button {
-                            let url = URL(string: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf")
-                            FileDownloader.loadFileAsync(url: url!) { (path, error) in
-                                print("PDF File downloaded to : \(path!)")
+        VStack(alignment: .leading) {
+            Text("Frames")
+                .font(.largeTitle)
+                .padding(.bottom)
+            TabView {
+                ForEach(frames, id: \.self) { actFrame in
+                    ActFrameView(frame: actFrame)
+                        .tabItem {
+                            HStack {
+                                Text(actFrame.Action)
                             }
-                        } label: {
-                            Image(systemName: "arrow.down.circle")
-                                .font(.largeTitle)
                         }
-                        .buttonStyle(.plain)
-                        .foregroundStyle(Color.accentColor)
-                        .padding()
-                    }
-
+                        .overlay(alignment: .bottomTrailing) {
+                            Button {
+                                let url = URL(string: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf")
+                                FileDownloader.loadFileAsync(url: url!) { (path, error) in
+                                    print("PDF File downloaded to : \(path!)")
+                                }
+                            } label: {
+                                Image(systemName: "arrow.down.circle")
+                                    .font(.largeTitle)
+                            }
+                            .buttonStyle(.plain)
+                            .foregroundStyle(Color.accentColor)
+                            .padding()
+                        }
+                    
+                }
             }
         }
     }

@@ -10,13 +10,13 @@ import SwiftUI
 
 
 struct MessageView: View {
-    let message: Message
+    let message: Components.Schemas.Message
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text(message.sender.rawValue)
+            Text(message.role?.rawValue ?? "unkown")
                 .font(.headline.bold())
-            Text(message.message)
+            Text(message.content ?? "no content")
                 .foregroundStyle(.secondary)
         }
                }

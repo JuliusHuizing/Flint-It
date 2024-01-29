@@ -72,6 +72,7 @@ struct HomeView: View {
                 
                  else {
                      FramesView(frames: $actFrames)
+                         .padding()
                  }
                  
              }

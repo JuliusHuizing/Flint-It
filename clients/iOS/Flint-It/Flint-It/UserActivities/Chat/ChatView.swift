@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import ActivityIndicatorView
 
 struct ChatView: View {
     @ObservedObject var chat: Chat
@@ -22,9 +22,20 @@ struct ChatView: View {
             VStack(alignment: .leading) {
                 Text("Chat")
                     .font(.largeTitle)
-                SwiftUI.List(chat.messages) { message in
-                    MessageView(message: message)
+                SwiftUI.List {
+                    ForEach(chat.messages, id: \.self) { message in
+                        MessageView(message: message)
+
+                    }
+                    if chat.isWaitingForServerResponse {
+                        HStack {
+                            ActivityIndicatorView(isVisible: .constant(true), type: .opacityDots(count: 3, inset: 4))
+                                .frame(width: 25, height: 25)
+                            Spacer()
+                        }
+                    }
                 }
+                   
             }
         }
     }

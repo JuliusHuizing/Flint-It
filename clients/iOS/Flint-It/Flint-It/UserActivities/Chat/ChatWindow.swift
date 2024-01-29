@@ -28,10 +28,15 @@ struct ChatWindow: View {
             Divider()
             InputFieldView(text: $text, placeHolder: chat.article == nil ? .constant("Copy and paste a norm here.") : .constant("Message FlintGPT...")) { article in
                 withAnimation {
-                    chat.add(message: .init(sender: .user, message: article))
+                    if chat.messages.isEmpty {
+                        chat.article = article
+                    }
+                    chat.chat(userMessage: article)
+//                    chat.add(message: .init(role: .user, content: article))
+//                    chat.add(message: .init(sender: .user, message: article))
                     let seconds = 1.0
                     DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        chat.messages.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
+//                        chat.add.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
                     }
                 }
                 self.onSubmit(article)
