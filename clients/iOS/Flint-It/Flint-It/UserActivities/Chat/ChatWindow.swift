@@ -18,12 +18,17 @@ struct ChatWindow: View {
     var onSubmit: (String) -> Void
     var body: some View {
         VStack {
+            if let article = chat.article {
+                NormView(norm: article)
+                    .padding()
+            }
             ChatView(chat: chat)
+                .padding()
             
             Divider()
-            InputFieldView(text: $text) { article in
+            InputFieldView(text: $text, placeHolder: chat.article == nil ? .constant("Copy and paste a norm here.") : .constant("Message FlintGPT...")) { article in
                 withAnimation {
-                    chat.messages.append( .init(sender: .user, message: article))
+                    chat.add(message: .init(sender: .user, message: article))
                     let seconds = 1.0
                     DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
                         chat.messages.append(.init(sender: .bot, message: "Check! I'll try to extract all potential Act Frames for you."))
@@ -31,6 +36,8 @@ struct ChatWindow: View {
                 }
                 self.onSubmit(article)
             }
+            .frame(height: chat.article == nil ? 500 : 250 )
+            
         }
     }
 }

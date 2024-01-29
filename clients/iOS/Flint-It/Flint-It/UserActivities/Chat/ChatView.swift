@@ -19,8 +19,12 @@ struct ChatView: View {
             }
             
         } else {
-            SwiftUI.List(chat.messages) { message in
-                MessageView(message: message)
+            VStack(alignment: .leading) {
+                Text("Chat")
+                    .font(.largeTitle)
+                SwiftUI.List(chat.messages) { message in
+                    MessageView(message: message)
+                }
             }
         }
     }

@@ -10,11 +10,12 @@ import SwiftUI
 // keep as separate view so we can use it to align the heights of the contentunavailable views in the display act frame view.
 struct InputFieldView: View {
     @Binding var text: String
+    @Binding var placeHolder: String
     var onSubmit: (String) -> Void
     var body: some View {
         ZStack {
             if self.text.isEmpty {
-                TextEditor(text:.constant("Copy and paste a norm here."))
+                TextEditor(text: $placeHolder)
                         .foregroundColor(.gray)
                         .disabled(true)
             }
