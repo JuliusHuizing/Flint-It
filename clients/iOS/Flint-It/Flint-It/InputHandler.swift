@@ -19,13 +19,13 @@ class InputHandler {
             serverURL: try! Servers.server1(),
             transport: URLSessionTransport()
         )
-        let response = try await client.post_sol_chat(body: .json(.init(messages: chat.messagesV2)))
+        let fullHistory: Components.Schemas.Messages = chat.messagesV2
+        let response = try await client.post_sol_chat(body: .json(.init(messages: fullHistory)))
         switch response {
             case let .ok(okResponse):
                 switch okResponse.body {
                 case .json(let json):
-                    return json
-                    
+                    return json.message!
                 }
             
 

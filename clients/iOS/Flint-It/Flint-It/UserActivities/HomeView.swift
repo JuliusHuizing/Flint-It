@@ -52,15 +52,15 @@ struct HomeView: View {
             }
              } content: {
                  ChatWindow(chat: showingChat, onSubmit: { article in
-                         Task {
-                             self.isLoading = true
-                             try? await Task.sleep(for: .seconds(6))
-                             self.isLoading = false
-                             let actFrame = try await InputHandler.requestActFrame(for: article)
-                             withAnimation {
-                                 self.actFrames.append(actFrame)
-                             }
-                         }
+//                         Task {
+//                             self.isLoading = true
+//                             try? await Task.sleep(for: .seconds(6))
+//                             self.isLoading = false
+//                             let actFrame = try await InputHandler.requestActFrame(for: article)
+//                             withAnimation {
+//                                 self.actFrames.append(actFrame)
+//                             }
+//                         }
                      })
              } detail: {
                  if isLoading {
