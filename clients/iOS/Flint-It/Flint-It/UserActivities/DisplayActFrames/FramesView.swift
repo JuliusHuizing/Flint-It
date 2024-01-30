@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FramesView: View {
-    @Binding var frames: [Components.Schemas.ActFrame]
+    @ObservedObject var chat: Chat
     var body: some View {
         VStack(alignment: .leading) {
             Text("Frames")
                 .font(.largeTitle)
                 .padding(.bottom)
             TabView {
-                ForEach(frames, id: \.self) { actFrame in
+                ForEach(chat.frames, id: \.self) { actFrame in
                     ActFrameView(frame: actFrame)
                         .tabItem {
                             HStack {

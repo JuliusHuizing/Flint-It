@@ -28,9 +28,6 @@ struct ChatWindow: View {
             Divider()
             InputFieldView(text: $text, placeHolder: chat.article == nil ? .constant("Copy and paste a norm here.") : .constant("Message FlintGPT...")) { article in
                 withAnimation {
-                    if chat.messages.isEmpty {
-                        chat.article = article
-                    }
                     chat.chat(userMessage: article)
 //                    chat.add(message: .init(role: .user, content: article))
 //                    chat.add(message: .init(sender: .user, message: article))

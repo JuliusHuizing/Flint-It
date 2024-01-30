@@ -17,6 +17,9 @@ class Chat: ObservableObject, Identifiable {
     @Published var messagesV2: Components.Schemas.Messages = .init()
     @Published var isWaitingForServerResponse: Bool = false
     
+    @Published var isComputingActFrame: Bool = false
+    @Published var frames: [Components.Schemas.ActFrame] = .init()
+    
     
 }
 
@@ -43,9 +46,19 @@ extension Chat {
             self.messagesV2.append(.init(role: .user, content: userMessage))
             self.isWaitingForServerResponse = true
             Task(priority: .userInitiated) {
-                let responseMessage = try await InputHandler.chat(usingLastMessageOf: self)
+                let response = try await InputHandler.chat(usingLastMessageOf: self)
+                let latentResponse = response.latentResponse!
                 await MainActor.run {
-                    self.messagesV2.append(responseMessage)
+                    
+                    if self.article == nil && latentResponse.provided_norm != nil {
+                        self.article = latentResponse.provided_norm!
+                    }
+                    
+                    
+                    self.messagesV2.append(response.message!)
+                    if response.latentResponse!.user_asks_for_improved_act_frame! {
+                        self.isComputingActFrame = true
+                    }
                     self.isWaitingForServerResponse = false
 
                 }

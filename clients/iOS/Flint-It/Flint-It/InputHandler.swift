@@ -14,7 +14,7 @@ class InputHandler {
         case undocumentedResponse
     }
     
-    static func chat(usingLastMessageOf chat: Chat) async throws -> Components.Schemas.Message {
+    static func chat(usingLastMessageOf chat: Chat) async throws -> Components.Schemas.ChatResponse {
         let client: APIProtocol = Client(
             serverURL: try! Servers.server1(),
             transport: URLSessionTransport()
@@ -25,7 +25,7 @@ class InputHandler {
             case let .ok(okResponse):
                 switch okResponse.body {
                 case .json(let json):
-                    return json.message!
+                    return json
                 }
             
 

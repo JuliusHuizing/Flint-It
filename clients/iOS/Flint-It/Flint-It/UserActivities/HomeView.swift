@@ -63,15 +63,15 @@ struct HomeView: View {
 //                         }
                      })
              } detail: {
-                 if isLoading {
+                 if showingChat.isComputingActFrame {
                      ComputingActFrameView()
                  }
-                 else if actFrames.isEmpty {
+                 else if showingChat.frames.isEmpty {
                      FramesStartupView()
                  }
                 
                  else {
-                     FramesView(frames: $actFrames)
+                     FramesView(chat: showingChat)
                          .padding()
                  }
                  
