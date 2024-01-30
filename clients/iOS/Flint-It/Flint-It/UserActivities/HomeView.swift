@@ -62,18 +62,12 @@ struct HomeView: View {
 //                             }
 //                         }
                      })
+                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
              } detail: {
-                 if showingChat.isComputingActFrame {
-                     ComputingActFrameView()
-                 }
-                 else if showingChat.frames.isEmpty {
-                     FramesStartupView()
-                 }
-                
-                 else {
+               
                      FramesView(chat: showingChat)
                          .padding()
-                 }
+                 
                  
              }
              .navigationTitle("Flint-it")
