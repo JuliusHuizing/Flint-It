@@ -11,43 +11,82 @@ import OpenAPIURLSession
 import ActivityIndicatorView
 
 struct ActFrameView: View {
+    var font: Font = .largeTitle
     var frame: Components.Schemas.ActFrame
     var body: some View {
 
                 SwiftUI.List {
-                    Section("Actor") {
+                    Section {
                         Text(frame.Actor)
+                    } header: {
+                        Text("Actor")
+                            .font(font)
                     }
-                    Section("Action") {
+                    
+                    Section {
                         Text(frame.Action)
                     }
-                    Section("Object") {
+                    header: {
+                        Text("Action")
+                            .font(font)
+                    }
+                    
+                    Section {
+                        Text(frame.Object)
+                    } header: {
+                        Text("Object")
+                            .font(font)
+                    }
+                    
+                    
+                    Section {
                         Text(frame.Recipient)
                     }
-                    Section("Recipient") {
-                        Text(frame.Recipient)
-                    }
-                    Section("Preconditions") {
+                             header: {
+                                 Text("Recipient")
+                                     .font(font)
+                             }
+                    
+                    Section {
                         BooleanSetView(booleanSet: frame.Preconditions)
                         //                    PreconditionsView(conditions: frame.Preconditions)
                     }
-                    Section("Creating Post-Conditions") {
+                header: {
+                    Text("Pre-Conditions")
+                        .font(font)
+                }
+                    Section{
                         ForEach(frame.Creating_postcondition, id: \.self) { postcondition in
                             Text(postcondition)
                         }
                     }
-                    Section("Terminating Post-Conditions") {
+                header: {
+                    Text("Creating Post-Conditions")
+                        .font(font)
+                }
+                    Section {
                         ForEach(frame.Terminating_postcondition, id: \.self) { postcondition in
                             Text(postcondition)
                         }
                     }
-                    Section("Reference to Sources") {
+                header: {
+                    Text("Terminating Post-Conditions")
+                        .font(font)
+                }
+                    Section{
                         ForEach(frame.References_to_sources, id: \.self) { reference in
                             Text(reference)
                         }
                     }
+                header: {
+                    Text("Reference to Sources")
+                        .font(font)
+                }
                    
                 }
+                
+                .scrollContentBackground(.hidden)
+                .listStyle(.plain)
                     
                 }
             }
