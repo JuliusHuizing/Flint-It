@@ -25,7 +25,7 @@ struct ChatView: View {
                 SwiftUI.List {
                     ForEach(chat.messages, id: \.self) { message in
                         MessageView(message: message)
-
+                        
                     }
                     if chat.isWaitingForServerResponse {
                         HStack {
@@ -35,9 +35,16 @@ struct ChatView: View {
                         }
                     }
                 }
-                   
+                .listStyle(.plain)
+                .listRowBackground(Color.red.opacity(0))
+                .background(
+                   .ultraThickMaterial,
+                   in: RoundedRectangle(cornerRadius: 25, style: .continuous)
+                )
             }
-        }
+                
+            }
+           
     }
 }
 

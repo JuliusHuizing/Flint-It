@@ -62,7 +62,20 @@ struct HomeView: View {
 //                             }
 //                         }
                      })
-                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
+//                 .overlay(alignment: .bottomTrailing) {
+//                     Button {
+//                         let url = URL(string: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf")
+//                         FileDownloader.loadFileAsync(url: url!) { (path, error) in
+//                             print("PDF File downloaded to : \(path!)")
+//                         }
+//                     } label: {
+//                         Image(systemName: "arrow.down.circle")
+//                             .font(.largeTitle)
+//                     }
+//                     .buttonStyle(.plain)
+//                     .foregroundStyle(Color.accentColor)
+//                     .padding()
+//                 }
              } detail: {
                
                      FramesView(chat: showingChat)

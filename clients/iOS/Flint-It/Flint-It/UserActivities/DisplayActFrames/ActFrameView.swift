@@ -28,6 +28,7 @@ struct ActFrameView: View {
                         Text(frame.Recipient)
                     }
                     Section("Preconditions") {
+                        BooleanSetView(booleanSet: frame.Preconditions)
                         //                    PreconditionsView(conditions: frame.Preconditions)
                     }
                     Section("Creating Post-Conditions") {

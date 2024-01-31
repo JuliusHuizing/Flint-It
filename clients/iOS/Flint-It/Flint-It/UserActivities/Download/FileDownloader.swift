@@ -4,7 +4,8 @@ class FileDownloader {
 
     static func loadFileSync(url: URL, completion: @escaping (String?, Error?) -> Void)
     {
-        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let documentsUrl = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        let documentsUrl = URL(string: "/Users/julius/Downloads/")!
 
         let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
 
@@ -36,7 +37,7 @@ class FileDownloader {
 
     static func loadFileAsync(url: URL, completion: @escaping (String?, Error?) -> Void)
     {
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let documentsUrl = URL(string: "/Users/julius/Downloads/")!
 
         let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
 

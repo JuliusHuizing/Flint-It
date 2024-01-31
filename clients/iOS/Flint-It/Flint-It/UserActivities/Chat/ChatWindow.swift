@@ -47,15 +47,15 @@ struct ChatWindow: View {
 }
 
 
-//#Preview {
-//    NavigationSplitView {
-//        //
-//    } content: {
-//        ChatWindow(processingInput: .constant(false), onSubmit: { _ in})
-//
-//    } detail: {
-//        //
-//    }
-//
-//    
-//}
+#Preview {
+    NavigationSplitView {
+        //
+    } content: {
+        ChatWindow(chat: .init(), onSubmit: { _ in})
+
+    } detail: {
+        //
+    }
+
+    
+}
