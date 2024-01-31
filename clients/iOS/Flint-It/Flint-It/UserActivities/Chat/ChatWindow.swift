@@ -20,10 +20,13 @@ struct ChatWindow: View {
         VStack {
             if let article = chat.article {
                 NormView(norm: article)
+                    .frame(maxWidth: .infinity)
                     .padding()
             }
             ChatView(chat: chat)
+                .frame(maxWidth: .infinity)
                 .padding()
+//                .background(.gray.opacity(0.5), in: RoundedRectangle(cornerRadius: cornerRadii))
             
             Divider()
             InputFieldView(text: $text, placeHolder: chat.article == nil ? .constant("Copy and paste a norm here.") : .constant("Message FlintGPT...")) { article in
@@ -39,7 +42,7 @@ struct ChatWindow: View {
                 self.onSubmit(article)
             }
             .frame(height: chat.article == nil ? 500 : 250 )
-            .foregroundStyle(chat.article == nil ? .orange : .primary)
+//            .foregroundStyle(chat.article == nil ? .orange : .primary)
 
             
         }

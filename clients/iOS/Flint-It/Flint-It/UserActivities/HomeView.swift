@@ -84,6 +84,19 @@ struct HomeView: View {
                  
              }
              .navigationTitle("Flint-it")
+             .onAppear {
+                 Task {
+                     try? await Task.sleep(nanoseconds: 1_000_000_000)
+                     await MainActor.run {
+                         withAnimation {
+                             let message: Components.Schemas.Message = .init(role: .system, content: "Hi there!")
+                             showingChat.messagesV2.append(message)
+                         }
+                     }
+                 }
+               
+                 
+             }
          }
     }
 

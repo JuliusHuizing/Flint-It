@@ -12,12 +12,12 @@ import SwiftUI
 struct MessageView: View {
     let message: Components.Schemas.Message
     var body: some View {
-        
         VStack(alignment: .leading) {
-            Text(message.role?.rawValue ?? "unkown")
+            Text(message.role?.rawValue == "system" ? "FlintGPT" : "You")
                 .font(.headline.bold())
             Text(message.content ?? "no content")
                 .foregroundStyle(.secondary)
         }
-               }
+        
+    }
 }

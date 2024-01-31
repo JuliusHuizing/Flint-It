@@ -24,7 +24,10 @@ struct ChatView: View {
                     .font(.largeTitle)
                 SwiftUI.List {
                     ForEach(chat.messages, id: \.self) { message in
+                        
                         MessageView(message: message)
+                            .listRowBackground(Color.red.opacity(0))
+
                         
                     }
                     if chat.isWaitingForServerResponse {
@@ -35,13 +38,16 @@ struct ChatView: View {
                         }
                     }
                 }
-                .listStyle(.plain)
-                .listRowBackground(Color.red.opacity(0))
-                .background(
-                   .ultraThickMaterial,
-                   in: RoundedRectangle(cornerRadius: 25, style: .continuous)
-                )
+//                .listStyle(.inset)
+//                .listStyle(.plain)
+               
             }
+            .padding()
+            .scrollContentBackground(.hidden)
+            .background(
+                backgroundColor,
+               in: RoundedRectangle(cornerRadius: cornerRadii, style: .continuous)
+            )
                 
             }
            

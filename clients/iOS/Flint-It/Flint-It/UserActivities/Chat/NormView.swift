@@ -14,9 +14,22 @@ struct NormView: View {
             Text("Norm")
                 .font(.largeTitle)
                 .padding(.bottom)
-            Text(verbatim: "\"\(norm)\"")
+                .foregroundColor(.primary)
+
+            Text(norm)
+                .multilineTextAlignment(.leading)
+                .foregroundStyle(.orange)
+               
+//                .shadow(color: .black.opacity(0.05), radius: 10)
+
+
         }
-        .foregroundStyle(.orange)
+        .padding()
+        .background(
+            backgroundColor,
+           in: RoundedRectangle(cornerRadius: cornerRadii, style: .continuous)
+        )
+       
     }
 }
 

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+let cornerRadii = 10.0
+let backgroundColor: Color = .gray.opacity(0.25)
+
 @main
 struct Flint_ItApp: App {
     var body: some Scene {
