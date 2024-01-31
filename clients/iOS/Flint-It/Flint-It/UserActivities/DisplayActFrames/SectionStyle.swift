@@ -9,7 +9,31 @@ import SwiftUI
 
 struct SectionStyle: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        SwiftUI.List {
+            Group {
+                Section {
+                    Text("Test")
+                } header: {
+                    Text("test")
+                        .font(.largeTitle)
+                }
+                
+                Section {
+                    Text("Test")
+                } header: {
+                    Text("test")
+                        .font(.largeTitle)
+                }
+            }
+            .listRowSeparator(.hidden)
+
+
+        }
+        .listStyle(.inset)
+        .listSectionSeparator(.hidden)
+        
+        .scrollContentBackground(.hidden)
+        
     }
 }
 

@@ -38,7 +38,7 @@ struct HomeView: View {
                 ForEach(chats.sorted(by: { chat1, chat2 in
                     chat1.date > chat2.date
                 })) { chat in
-                    Button(chat.id) {
+                    Button(chat.name) {
                         withAnimation {
                             self.showingChat = chat
                         }

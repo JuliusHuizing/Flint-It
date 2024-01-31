@@ -22,6 +22,7 @@ struct ChatView: View {
             VStack(alignment: .leading) {
                 Text("Chat")
                     .font(.largeTitle)
+                    .foregroundStyle(.teal)
                 SwiftUI.List {
                     ForEach(chat.messages, id: \.self) { message in
                         

@@ -1,12 +1,15 @@
 import SwiftUI
 import OpenAPIURLSession
 struct BooleanSetView: View {
-    let booleanSet: Components.Schemas.BooleanSet
+    @State var booleanSet: Components.Schemas.BooleanSet
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let condition = booleanSet.condition {
-                Text(condition)
+                TextField("Condition", text: $booleanSet.condition.toUnwrapped(defaultValue: ""))
+                    .background(.red.opacity(0))
+                    .textFieldStyle(.roundedBorder)
+                    .foregroundStyle(.secondary)
             }
             if let andConditions = booleanSet.and {
                 Text("AND")
@@ -31,5 +34,10 @@ struct BooleanSetView: View {
                     .padding(.leading, 20)
             }
         }
+    }
+}
+extension Binding {
+     func toUnwrapped<T>(defaultValue: T) -> Binding<T> where Value == Optional<T>  {
+        Binding<T>(get: { self.wrappedValue ?? defaultValue }, set: { self.wrappedValue = $0 })
     }
 }

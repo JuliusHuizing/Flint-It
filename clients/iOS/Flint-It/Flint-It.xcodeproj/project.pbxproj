@@ -16,6 +16,7 @@
 		C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157B12B5AC3E300D66289 /* HomeView.swift */; };
 		C62EC8F82B5E6DA0005ABE1C /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C62EC8F72B5E6DA0005ABE1C /* ActivityIndicatorView */; };
 		C65123412B6A5FD400B7E26A /* PreconditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65123402B6A5FD400B7E26A /* PreconditionsView.swift */; };
+		C65123452B6A849900B7E26A /* SectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65123442B6A849900B7E26A /* SectionStyle.swift */; };
 		C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */; };
 		C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D5CB62B5AC05F00737B8A /* ContentView.swift */; };
 		C66D5CB92B5AC06000737B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66D5CB82B5AC06000737B8A /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		C62157AF2B5AC3A600D66289 /* ActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFrameView.swift; sourceTree = "<group>"; };
 		C62157B12B5AC3E300D66289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C65123402B6A5FD400B7E26A /* PreconditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreconditionsView.swift; sourceTree = "<group>"; };
+		C65123442B6A849900B7E26A /* SectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionStyle.swift; sourceTree = "<group>"; };
 		C66D5CB12B5AC05F00737B8A /* Flint-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flint-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D5CB42B5AC05F00737B8A /* Flint_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flint_ItApp.swift; sourceTree = "<group>"; };
 		C66D5CB62B5AC05F00737B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C608FA492B5EB786001569E1 /* FramesView.swift */,
+				C65123442B6A849900B7E26A /* SectionStyle.swift */,
 				C65123402B6A5FD400B7E26A /* PreconditionsView.swift */,
 				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
 				C608FA4C2B5EBB8E001569E1 /* FramesStartupView.swift */,
@@ -377,6 +380,7 @@
 				C608FA4D2B5EBB8E001569E1 /* FramesStartupView.swift in Sources */,
 				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
 				C6AE11872B63EA93005033C9 /* StreamHandler.swift in Sources */,
+				C65123452B6A849900B7E26A /* SectionStyle.swift in Sources */,
 				C62157AD2B5AC32100D66289 /* ChatWindow.swift in Sources */,
 				C66D5CB52B5AC05F00737B8A /* Flint_ItApp.swift in Sources */,
 				C608FA4A2B5EB786001569E1 /* FramesView.swift in Sources */,

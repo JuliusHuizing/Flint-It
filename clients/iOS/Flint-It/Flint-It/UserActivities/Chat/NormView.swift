@@ -14,11 +14,11 @@ struct NormView: View {
             Text("Norm")
                 .font(.largeTitle)
                 .padding(.bottom)
-                .foregroundColor(.primary)
+                .foregroundColor(.orange)
 
             Text(norm)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.orange)
+                .foregroundStyle(.secondary)
                
 //                .shadow(color: .black.opacity(0.05), radius: 10)
 

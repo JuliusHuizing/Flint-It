@@ -23,7 +23,18 @@ class Chat: ObservableObject, Identifiable {
     
     
 }
-
+extension Chat {
+    var name: String {
+        if let article {
+            return article
+        } else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let currentTime = formatter.string(from: self.date)
+            return currentTime
+        }
+    }
+}
 
 
 extension Chat {
@@ -43,7 +54,6 @@ extension Chat {
 
 extension Chat {
     func chat(userMessage: String) {
-        withAnimation {
             self.isDisabled = true
             self.messagesV2.append(.init(role: .user, content: userMessage))
             self.isWaitingForServerResponse = true
@@ -51,34 +61,44 @@ extension Chat {
                 let response = try await InputHandler.chat(usingLastMessageOf: self)
                 let latentResponse = response.latentResponse!
                 await MainActor.run {
-                    if self.article == nil && latentResponse.provided_norm != nil {
-                        self.article = latentResponse.provided_norm!
+                    withAnimation {
+                        if self.article == nil && latentResponse.provided_norm != nil {
+                            self.article = latentResponse.provided_norm!
+                        }
+                        self.messagesV2.append(response.message!)
+                        self.isWaitingForServerResponse = false
                     }
-                    self.messagesV2.append(response.message!)
-                    self.isWaitingForServerResponse = false
                    
 
                 }
                 if latentResponse.is_first_time_user_provides_norm! || latentResponse.user_asks_for_improved_act_frame! {
                     await MainActor.run {
-                        self.isComputingActFrame = true
+                        withAnimation {
+                            self.isComputingActFrame = true
+                        }
                     }
                     let response = try await InputHandler.chatWithActFrameWorker(usingLastMessageOf: self)
                     if let frames = response.actFrames {
                         await MainActor.run {
-                            self.frames.append(contentsOf: frames)
+                            withAnimation  {
+                                self.frames.append(contentsOf: frames)
+                            }
                         }
                     }
                     await MainActor.run {
-                        self.isComputingActFrame = false
+                        withAnimation {
+                            self.isComputingActFrame = false
+                        }
                     }
                     
                 }
                 await MainActor.run {
-                    self.isDisabled = false
+                    withAnimation {
+                        self.isDisabled = false
+                    }
                 }
             }
-        }
+        
     }
     
     func add(message: Components.Schemas.Message) {
