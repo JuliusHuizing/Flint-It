@@ -19,30 +19,32 @@ struct ChatView: View {
             }
             
         } else {
-            VStack(alignment: .leading) {
-                Text("Chat")
-                    .font(.largeTitle)
-                    .foregroundStyle(.teal)
-                SwiftUI.List {
-                    ForEach(chat.messages, id: \.self) { message in
-                        
-                        MessageView(message: message)
-                            .listRowBackground(Color.red.opacity(0))
-
-                        
-                    }
-                    if chat.isWaitingForServerResponse {
-                        HStack {
-                            ActivityIndicatorView(isVisible: .constant(true), type: .opacityDots(count: 3, inset: 4))
-                                .frame(width: 25, height: 25)
-                            Spacer()
-                        }
-                    }
-                }
-//                .listStyle(.inset)
-//                .listStyle(.plain)
-               
-            }
+            
+            ChatViewV2(chat: chat)
+//            VStack(alignment: .leading) {
+//                Text("Chat")
+//                    .font(.largeTitle)
+//                    .foregroundStyle(.teal)
+//                SwiftUI.List {
+//                    ForEach(chat.messages, id: \.self) { message in
+//                        
+//                        MessageView(message: message)
+//                            .listRowBackground(Color.red.opacity(0))
+//
+//                        
+//                    }
+//                    if chat.isWaitingForServerResponse {
+//                        HStack {
+//                            ActivityIndicatorView(isVisible: .constant(true), type: .opacityDots(count: 3, inset: 4))
+//                                .frame(width: 25, height: 25)
+//                            Spacer()
+//                        }
+//                    }
+//                }
+////                .listStyle(.inset)
+////                .listStyle(.plain)
+//               
+//            }
             .padding()
             .scrollContentBackground(.hidden)
             .background(
@@ -54,6 +56,64 @@ struct ChatView: View {
            
     }
 }
+
+struct ChatViewV2: View {
+    @ObservedObject var chat: Chat
+    
+    @State private var scrollProxy: ScrollViewProxy? = nil
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Chat")
+                .font(.largeTitle)
+                .foregroundStyle(.teal)
+            ScrollView {
+                ScrollViewReader { proxy in
+                    ForEach(chat.messagesV2, id: \.self) { message in
+                        HStack {
+                            MessageView(message: message)
+                            Spacer()
+//                                .listRowBackground(Color.red.opacity(0))
+                        }
+                        Divider()
+                    }
+                    .onAppear {
+                        scrollProxy = proxy
+                    }
+                    if chat.isWaitingForServerResponse {
+                        HStack {
+                            ActivityIndicatorView(isVisible: .constant(true), type: .opacityDots(count: 3, inset: 4))
+                                .frame(width: 25, height: 25)
+                            Spacer()
+                        }
+                    }
+//                    Spacer()
+                }
+                
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .onChange(of: chat.messages, perform: { _ in
+            scrollToBottom()
+        })
+        .onChange(of: chat.isWaitingForServerResponse) {
+            scrollToBottom()
+
+        }
+        
+    }
+    
+//    func didTapAddItemButton() {
+//        contentVM.addItemToArray()
+//    }
+    
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(chat.messagesV2.last, anchor: .bottom)
+        }
+    }
+}
+
 
 
 

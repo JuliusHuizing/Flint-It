@@ -38,13 +38,23 @@ class InputHandler {
         }
         
     }
+    
+//    static var urlConfig: URLSessionConfiguration {
+//        let configuration = URLSessionConfiguration.default
+//        configuration.timeoutIntervalForRequest = 60 // Request timeout interval in seconds
+//        configuration.timeoutIntervalForResource = 60 // Reso
+//        return configuration
+//    }
     static func chatWithActFrameWorker(usingLastMessageOf chat: Chat) async throws -> Components.Schemas.ChatResponse {
+      
         let client: APIProtocol = Client(
             serverURL: try! Servers.server1(),
             transport: URLSessionTransport()
         )
+        
         let fullHistory: Components.Schemas.Messages = chat.messagesV2
         let response = try await client.post_sol_chatWithActFrameWorker(body: .json(.init(messages: fullHistory)))
+        
         switch response {
             case let .ok(okResponse):
                 switch okResponse.body {

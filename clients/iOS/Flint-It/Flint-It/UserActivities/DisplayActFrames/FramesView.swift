@@ -13,7 +13,7 @@ struct FramesView: View {
         case fact = "Fact Frames"
     }
     @ObservedObject var chat: Chat
-    @State var showingFrame: Components.Schemas.ActFrame? = nil
+//    @State var showingFrame: Components.Schemas.ActFrame? = nil
 //    @State var showingFrameKind: FrameKind = .act
   
     var body: some View {

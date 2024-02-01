@@ -32,7 +32,11 @@ struct LoadedFramesView: View {
             
             Picker("", selection: $showingFrame) {
                 ForEach(chat.frames, id: \.self) { frame in
-                    Text(frame.Action)
+                    Button(frame.Action) {
+                        withAnimation {
+                            showingFrame = frame
+                        }
+                    }
                 }
             }
             .pickerStyle(.segmented)
@@ -40,7 +44,7 @@ struct LoadedFramesView: View {
             
 //                TabView {
 //                    ForEach(chat.frames, id: \.self) { actFrame in
-                    ActFrameView(frame: showingFrame)
+                    ActFrameView(frame: $showingFrame)
 //                            .tabItem {
 //                                HStack {
 //                                    Text(actFrame.Action)

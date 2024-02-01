@@ -13,7 +13,7 @@ import ActivityIndicatorView
 struct ActFrameView: View {
     var font: Font = .title
 
-    @State var frame: Components.Schemas.ActFrame
+    @Binding var frame: Components.Schemas.ActFrame
     @State var isFavorite = false
     var body: some View {
 
