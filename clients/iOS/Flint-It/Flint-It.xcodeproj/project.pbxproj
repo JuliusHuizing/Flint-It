@@ -11,6 +11,7 @@
 		C608FA4A2B5EB786001569E1 /* FramesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608FA492B5EB786001569E1 /* FramesView.swift */; };
 		C608FA4D2B5EBB8E001569E1 /* FramesStartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608FA4C2B5EBB8E001569E1 /* FramesStartupView.swift */; };
 		C608FA502B5EBBBB001569E1 /* ComputingActFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608FA4F2B5EBBBB001569E1 /* ComputingActFrameView.swift */; };
+		C613DDD32B6BB25600C7FED0 /* LoadedFramesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613DDD22B6BB25600C7FED0 /* LoadedFramesView.swift */; };
 		C62157AD2B5AC32100D66289 /* ChatWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AC2B5AC32100D66289 /* ChatWindow.swift */; };
 		C62157B02B5AC3A600D66289 /* ActFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157AF2B5AC3A600D66289 /* ActFrameView.swift */; };
 		C62157B22B5AC3E300D66289 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157B12B5AC3E300D66289 /* HomeView.swift */; };
@@ -60,6 +61,7 @@
 		C608FA492B5EB786001569E1 /* FramesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesView.swift; sourceTree = "<group>"; };
 		C608FA4C2B5EBB8E001569E1 /* FramesStartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesStartupView.swift; sourceTree = "<group>"; };
 		C608FA4F2B5EBBBB001569E1 /* ComputingActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputingActFrameView.swift; sourceTree = "<group>"; };
+		C613DDD22B6BB25600C7FED0 /* LoadedFramesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedFramesView.swift; sourceTree = "<group>"; };
 		C62157AC2B5AC32100D66289 /* ChatWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindow.swift; sourceTree = "<group>"; };
 		C62157AF2B5AC3A600D66289 /* ActFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFrameView.swift; sourceTree = "<group>"; };
 		C62157B12B5AC3E300D66289 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				C608FA492B5EB786001569E1 /* FramesView.swift */,
+				C613DDD22B6BB25600C7FED0 /* LoadedFramesView.swift */,
 				C65123442B6A849900B7E26A /* SectionStyle.swift */,
 				C65123402B6A5FD400B7E26A /* PreconditionsView.swift */,
 				C62157AF2B5AC3A600D66289 /* ActFrameView.swift */,
@@ -379,6 +382,7 @@
 				C698444F2B67BB7600681F1C /* NormView.swift in Sources */,
 				C608FA4D2B5EBB8E001569E1 /* FramesStartupView.swift in Sources */,
 				C66D5CB72B5AC05F00737B8A /* ContentView.swift in Sources */,
+				C613DDD32B6BB25600C7FED0 /* LoadedFramesView.swift in Sources */,
 				C6AE11872B63EA93005033C9 /* StreamHandler.swift in Sources */,
 				C65123452B6A849900B7E26A /* SectionStyle.swift in Sources */,
 				C62157AD2B5AC32100D66289 /* ChatWindow.swift in Sources */,

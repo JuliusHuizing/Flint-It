@@ -6,7 +6,7 @@ struct BooleanSetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let condition = booleanSet.condition {
-                TextField("Condition", text: $booleanSet.condition.toUnwrapped(defaultValue: ""))
+                TextField("", text: $booleanSet.condition.toUnwrapped(defaultValue: ""))
                     .background(.red.opacity(0))
                     .textFieldStyle(.roundedBorder)
                     .foregroundStyle(.secondary)
@@ -14,17 +14,32 @@ struct BooleanSetView: View {
             if let andConditions = booleanSet.and {
                 Text("AND")
                     .bold()
-                ForEach(andConditions, id: \.self) { condition in
-                    BooleanSetView(booleanSet: condition)
-                        .padding(.leading, 20)
+                if  andConditions.isEmpty {
+                    TextField("", text: .constant(""))
+                        .background(.red.opacity(0))
+                        .textFieldStyle(.roundedBorder)
+                        .foregroundStyle(.secondary)
+                } else {
+                    ForEach(andConditions, id: \.self) { condition in
+                        BooleanSetView(booleanSet: condition)
+                            .padding(.leading, 20)
+                    }
                 }
+                    
             }
             if let orConditions = booleanSet.or {
                 Text("OR")
                     .bold()
-                ForEach(orConditions, id: \.self) { condition in
-                    BooleanSetView(booleanSet: condition)
-                        .padding(.leading, 20)
+                if orConditions.isEmpty {
+                    TextField("", text: .constant(""))
+                        .background(.red.opacity(0))
+                        .textFieldStyle(.roundedBorder)
+                        .foregroundStyle(.secondary)
+                } else {
+                    ForEach(orConditions, id: \.self) { condition in
+                        BooleanSetView(booleanSet: condition)
+                            .padding(.leading, 20)
+                    }
                 }
             }
             if let notCondition = booleanSet.not {

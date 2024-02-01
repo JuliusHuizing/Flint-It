@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var actFrames: [Components.Schemas.ActFrame] = .init()
     @State var isLoading = false
     @State var showingChat: Chat
+    @State var isFavorite = false
     
     init() {
         let chats = [Chat.init()]
@@ -62,7 +63,8 @@ struct HomeView: View {
 //                             }
 //                         }
                      })
-//                 .overlay(alignment: .bottomTrailing) {
+                 .overlay(alignment: .bottomTrailing) {
+                    
 //                     Button {
 //                         let url = URL(string: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf")
 //                         FileDownloader.loadFileAsync(url: url!) { (path, error) in
@@ -75,7 +77,7 @@ struct HomeView: View {
 //                     .buttonStyle(.plain)
 //                     .foregroundStyle(Color.accentColor)
 //                     .padding()
-//                 }
+                 }
              } detail: {
                
                      FramesView(chat: showingChat)
