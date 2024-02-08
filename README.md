@@ -16,11 +16,17 @@ pretation with which they are satisfied.
 - Export the final FLINT inter-
 pretation of the norm in a standardized format (json) for use in other downstream tasks.
 
+https://github.com/JuliusHuizing/Flint-It/assets/33287050/35448208-50a1-494c-b978-030fb3908460
+
+
 ![UI](./assets/ui.jpeg)
 
 
 ## Limitations
 Flint-it currently only provides a MacOS front-end, implemented in SwiftUI. Additional front-ends can be implemented in accordanc witht the provided OpenAPI specification and can be placed under *./clients/*.
+
+
+
 
 
 
